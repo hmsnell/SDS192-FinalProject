@@ -1,0 +1,48 @@
+---
+title: "**Who's on OkCupid?**"
+author: "_Hannah Snell, Claire Cicchetti, and Lillian Campbell_"
+date: "Last updated on `r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    df_print: kable
+---
+
+
+```{r include = FALSE}
+# Necessary Packages 
+
+require(tidyverse)
+require(okcupiddata)
+
+```
+
+## **Examining the Demographics of OkCupid Users**
+
+For this project dream team Hannah, Lillian, and Claire examined *OkCupid* data to specific user location within California. In addition, we also dove into more demographic information about these users, including their age and ethnic distributions. 
+So who is this illustrious demographic of aspiring love-getters? Let’s go there now...
+$~$
+
+## _Location of Users_ 
+
+(Side Note: This map was created using Tableau!)
+![Location of OkCupid Users](Yay.jpg)
+
+$~$
+As you can see in the map above, the vast majority of users are concentrated in San Francisco County, a population of 883,363 people, meaning roughly 3% of residents were signed up for *OkCupid* at the time of this study. The data used for this analysis came from a sample of OkCupid users in the Bay Area, so the reported data on location reflects a rather confusing variable of either an individual's hometown, town of residence, or just current location. From this analysis, most of these locations occurred in the San Francisco County area, and some other points were spread all over the state of California.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

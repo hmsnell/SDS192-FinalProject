@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Hannah Snell, Claire Cicchetti, and Lillian Campbell" />
+
+
+<title>A Closer Look: Age, Sex, Sexual Orientation, and Ethnicity Group</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Who's on OkCupid?</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Introduction and Location</a>
+</li>
+<li>
+  <a href="more_info.html">A Closer Look</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>A Closer Look: Age, Sex, Sexual Orientation, and Ethnicity Group</strong></h1>
+<h4 class="author"><em>Hannah Snell, Claire Cicchetti, and Lillian Campbell</em></h4>
+<h4 class="date">Last updated on 2019-12-19</h4>
+
+</div>
+
+
+<div id="ethnicity-sex-and-sexual-orientation" class="section level2">
+<h2><em>Ethnicity, Sex, and Sexual Orientation</em></h2>
+<p><img src="more_info_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>As you can see from this graphic, the vast majority of site users are white straight men <span class="math inline">\(*feminine gasp*\)</span>, closely followed by white straight women which far outnumber any other demographic. In an effort to unpack this disparity we examined some of the recent marketing photos released by the site to analyze how race, gender, and sexuality is portrayed by this dating app.</p>
+<p><span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+<div class="figure">
+<img src="DTF.png" />
+
+</div>
+<p><span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+<p>Considering that the San Francisco Bay Area is such a diverse location our group wondered why OkCupid’s population lacked any sort of ethnic diverstiy. One possible cause our group conisdered was the possibility of OkCupid marketing to specific audiences. The newest ad campaign (pictured above) appears to target a wide range of possible users, at least where sexuality is concerned.</p>
+<p>However, what we noticed is that all couples who stray from typical binary (multiracial, or queer) are pictured either wearing masks that either partially cover, or totally cover their faces, or have four hands. The one straight couple pictured is the only one that appears to not have extra appendages added or odd slime masks. And its important to note that the ads don’t feature any women of color. Is this a successful ad campaign for OkCupid to be running to increase the site’s diversity? Maybe not, since the majority of users are white, cis- gendered, heterosexual males.</p>
+<p><span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+</div>
+<div id="accounting-for-age" class="section level2">
+<h2><em>Accounting for Age</em></h2>
+<p>“Ok, Boomer.” We aren’t trying to burst your bubble, but OkCupid may be, if you’re looking for a modern dating experience and if you’re a bit up there in age. This visualization shows the density (or approximate number of people on a log10 scale) using OkCupid from a variety of age ranges and ethnicity groupings. Mind our grouping choices: our point here isn’t to diminish those who identify as multiracial/multiethnic (because as we all know, race/ethnicity is vastly heterogeneous), but our point is to show the difference in users of white-identifying race/ethnicity versus other groups, even after we do a bit of generalizing. And our conclusion from before still holds - this platform has a vast majority of active white-identifying users, mostly younger in age, on it when compared to other populations.</p>
+<div class="figure">
+<img src="Meme1.png" />
+
+</div>
+<p><span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+</div>
+<div id="the-security-question" class="section level2">
+<h2><em>The Security Question</em></h2>
+<p>“Gettin out there to sow ye wild oats where ye may” is always a somewhat daunting and vulnerable activity (what if the oats reject you?) But privacy concerns in dating apps cast an entirely different emphasis on user vulnerability. Tinder, the most popular dating app, has been criticized for its security flaws regarding user location <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, however this is nothing compared to the penetration testing of the app 3Fun which revealed a real-time pin map of user locations in Washington DC <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Additionally the site Ashley Madison <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> was targeted in 2015 posting 32 million users information on the dark web. If you’re considering dipping your toe in the rich petri dish of OkCupid’s cis white adonii, make sure you use appropriate privacy measures and be careful not to reveal personal information on this account, for other online dating platforms have met serious issues with security breaches. With OkCupid collecting similar information, you are always at risk, too.</p>
+<p><span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+<div class="figure">
+<img src="Meme2.png" />
+
+</div>
+<p><span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p><em>Data are from</em> [<a href="https://github.com/rudeboybert/okcupiddata" class="uri">https://github.com/rudeboybert/okcupiddata</a>]</p>
+<p><em>Kermit Images:</em></p>
+<p>[<a href="https://imgflip.com/memetemplate/But-Thats-None-Of-My-Business" class="uri">https://imgflip.com/memetemplate/But-Thats-None-Of-My-Business</a>][<a href="https://images.app.goo.gl/hy2KzV3uZXbwGc3m8" class="uri">https://images.app.goo.gl/hy2KzV3uZXbwGc3m8</a>]</p>
+<p><em>DTF Images:</em></p>
+<p>[<a href="https://theblog.okcupid.com/more-images-from-our-dtf-campaign-revealed-121ad0a153fe" class="uri">https://theblog.okcupid.com/more-images-from-our-dtf-campaign-revealed-121ad0a153fe</a>]</p>
+<p><em>In-Text Sources:</em></p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://www.cs.tufts.edu/comp/116/archive/fall2015/mfeltz.pdf" class="uri">https://www.cs.tufts.edu/comp/116/archive/fall2015/mfeltz.pdf</a><a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p><a href="https://www.pentestpartners.com/security-blog/group-sex-app-leaks-locations-pictures-and-other-personal-details-identifies-users-in-white-house-and-supreme-court/" class="uri">https://www.pentestpartners.com/security-blog/group-sex-app-leaks-locations-pictures-and-other-personal-details-identifies-users-in-white-house-and-supreme-court/</a><a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p><a href="https://www.wired.com/2015/08/happened-hackers-posted-stolen-ashley-madison-data/" class="uri">https://www.wired.com/2015/08/happened-hackers-posted-stolen-ashley-madison-data/</a><a href="#fnref3">↩</a></p></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
