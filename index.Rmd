@@ -20,9 +20,6 @@ require(okcupiddata)
 ```
 
 
-
-
-
 ## **Examining the Demographics of OkCupid Users**
 
 For this project dream team Hannah, Lillian, and Claire examined OkCupid data to specific user location within California. In addition, we also dove into more demographic information about these users, including their age and ethnic distributions. 
