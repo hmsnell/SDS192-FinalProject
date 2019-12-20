@@ -28,7 +28,7 @@ $~$
 ## _Location of Users_ 
 
 (Side Note: This map was created using Tableau!)
-![Location of OkCupid Users](Yay.jpg)
+![Location of OkCupid Users](Yay.png)
 
 $~$
 As you can see in the map above, the vast majority of users are concentrated in San Francisco County, a population of 883,363 people, meaning roughly 3% of residents were signed up for *OkCupid* at the time of this study. The data used for this analysis came from a sample of OkCupid users in the Bay Area, so the reported data on location reflects a rather confusing variable of either an individual's hometown, town of residence, or just current location. From this analysis, most of these locations occurred in the San Francisco County area, and some other points were spread all over the state of California.  
