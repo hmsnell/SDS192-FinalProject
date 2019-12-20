@@ -82,7 +82,7 @@ Laura_Palmer <- Laura_Palmer %>%
 
 ```
 
-```{r, echo = FALSE, include = FALSE}
+```{r, echo = FALSE}
 # Heatmap of Age vs. Ethnicity Data
 
 heatmapdata <- Laura_Palmer %>%
