@@ -1,4 +1,5 @@
-# My personal webpage
+# Who's on OkCupid? An Analysis of Dating App Data
 
-This is the README file for the source code for my personal webpage. It can be found at <https://whoishomer.github.io/webpage/>.  
+Visit the project site at:
 
+https://hmsnell.github.io/SDS192-FinalProject/
